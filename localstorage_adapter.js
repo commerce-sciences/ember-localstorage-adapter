@@ -152,8 +152,7 @@
       for (var i = 0; i < ids.length; i++) {
         record = namespace.records[ids[i]];
         if (!record || !record.hasOwnProperty('id')) {
-          return Ember.RSVP.reject(new Error("Couldn't find record of type '" + type.typeKey
-                                             + "' for the id '" + ids[i] + "'."));
+          return Ember.RSVP.reject();
         }
         results.push(Ember.copy(record));
       }
